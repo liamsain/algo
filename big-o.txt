@@ -1,0 +1,58 @@
+Big O is a standard used to describe the efficiency of algorithms
+
+If I have n data, how long will it take to complete x operation?
+
+e.g. How long does it take to read an item in an array of n length? 
+O(1) or 'Oh of 1'
+i.e. it takes one step to execute the operation
+
+How long does it take to insert an item in an array?
+If inserting at the end of the array, 1.
+But when you talk about big o you're talking about worst case
+If you want to insert an item at the start of the array
+you first have to move every other item in the array to the right
+then insert the item
+so if the array is size N, it will take N + 1 steps. N for moving, 1 for inserting
+
+If there are N elements, how many steps will the algorithm take?
+
+O(N) algorithms are also known as having linear time
+
+O(1) algorithms can also be referred to as having constant time
+
+Big O is concerned about how an algorithm's performance will change as the data increases
+So if something takes 3 steps, and always takes 3 steps, you describe it as O(1), not O(3)
+
+An O(N) alg whose performance is affected as the data increases
+
+
+What is the o notation (how do you properly ask this question?) for an alg for finding an element in an ordered array?
+If the alg is: search through each item from start til it's the one you're looking for then it's O(N)
+
+However, you could use binary search to drastically speed up the operation
+
+Binary search: divide the array size by 2, read the array at that index, 
+if it's lower than your target value, use that index as the min, the end of the index as max
+divide by 2, examine the value at that index etc
+e.g., find index of 7:
+const arr = [1,2,3,4,5,6,7,8,9,10]
+let val = arr[arr.length / 2] == 6
+6 is too low, so lower bound is index 5, upper bound is index 10
+middle val is 2...
+
+
+Each inspection eliminates half of the remaining elements
+Using this algorithm, the performance of the algorithm is, when the data doubles, n increases by 1
+Binary search has  time complexity of O(log N)
+The algorithm increases one step each time the data is doubled
+
+Log is short for logarithm
+
+log2 8 = 3. Or, you need to multiply 2 by itself 3 times to get 8
+Or, how many times do you need to halve 8 until you end up with 1
+8 is N
+log2 N = 3 where N = 8
+
+O(logN) is shorthand for O(log2 N)
+
+
